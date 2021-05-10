@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "cv application app using react and webpack",
   "main": "index.js",
+  "homepage": "http://bappyasif.github.io/cv_application",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "deploy": "gh-pages -d dist"
   },
   "author": "abappy",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^5.3.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.36.0",

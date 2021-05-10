@@ -3,11 +3,11 @@ import { ButtonElement } from "../form_elements/ButtonElement";
 import { InputElement } from "../form_elements/InputElement";
 
 export let GeneralInformation = (props) => {
-  let { name, email, number, handleChange, handleSubmit, isEdit } = props;
+  let { name, email, number, handleChange, handleSubmit, isEdit, invokeEdit } = props;
 
   return (
     <div>
-      <fieldset style={{ width: "47vw", marginTop: "8px", margin: "auto" }}>
+      <fieldset className="cv-sections">
         <legend>General Information</legend>
         <form onSubmit={handleSubmit}>
           <InputElement
@@ -28,7 +28,7 @@ export let GeneralInformation = (props) => {
             value={number}
             handleChange={handleChange}
           />
-          <ButtonElement />
+          <ButtonElement isEdit={isEdit} invokeEdit={invokeEdit} />
         </form>
       </fieldset>
     </div>

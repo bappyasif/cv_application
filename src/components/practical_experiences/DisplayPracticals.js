@@ -1,35 +1,40 @@
 import React from "react";
 
 export let DisplayPracticals = (props) => {
-  let { companyName, positionTitle, tasks, dateFrom, dateUntil } = props;
-  return (
+  let {
+    companyName,
+    positionTitle,
+    tasks,
+    dateFrom,
+    dateUntil,
+    editExperiences,
+  } = props;
+  // console.log(editExperiences);
+  return !editExperiences ? (
     <fieldset>
       <legend>Practical Informations</legend>
       <p>
-        <label>
-          Company Name: <span>{companyName}</span>
-        </label>
+        <label>Company Name:</label>
+        <span>{companyName}</span>
       </p>
       <p>
-        <label>
-          Job Title: <span>{positionTitle}</span>
-        </label>
+        <label>Job Title:</label>
+        <span>{positionTitle}</span>
       </p>
       <p>
-        <label>
-          Job Responsibility: <span>{tasks}</span>
-        </label>
+        <label>Job Responsibility:</label>
+        <span>{tasks}</span>
       </p>
       <p>
-        <label>
-          Started From: <span>{dateFrom}</span>
-        </label>
+        <label>Started From:</label>
+        <span>{dateFrom}</span>
       </p>
       <p>
-        <label>
-          Continued Until: <span>{dateUntil}</span>
-        </label>
+        <label>Continued Until:</label>
+        <span>{dateUntil}</span>
       </p>
     </fieldset>
+  ) : (
+    false
   );
 };

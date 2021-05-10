@@ -1,10 +1,40 @@
 .App {
   text-align: center;
+  background-color: darkkhaki;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.cv-sections {
+  width: max-content;
+  margin: auto;
+  margin-top: "8px";
+  color: green;
+  background-color: silver;
+}
+
+.cv-display {
+  width: 56vw;
+  margin: auto;
+  margin-top: 38px;
+  background-color: darkseagreen;
+}
+
+.cv-display legend {
+  color: maroon;
+}
+
+.cv-display p {
+  color: #282c34;
+  display: flex;
+  justify-content: space-around;
+}
+.cv-display p span {
+  width: 62%;
+  justify-content: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {

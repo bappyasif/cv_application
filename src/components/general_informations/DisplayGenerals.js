@@ -1,25 +1,24 @@
 import React from "react";
 
 export let DisplayGenerals = (props) => {
-  let { name, email, number } = props;
-  return (
+  let { name, email, number, generalEdit } = props;
+  return !generalEdit ? (
     <fieldset>
       <legend>General Information</legend>
       <p>
-        <label>
-          Name: <span>{name}</span>
-        </label>
+        <label>Name:</label>
+        <span>{name}</span>
       </p>
       <p>
-        <label>
-          Email: <span>{email}</span>
-        </label>
+        <label>Email:</label>
+        <span>{email}</span>
       </p>
       <p>
-        <label>
-          Mobile: <span>{number}</span>
-        </label>
+        <label>Mobile:</label>
+        <span>{number}</span>
       </p>
     </fieldset>
+  ) : (
+    false
   );
 };

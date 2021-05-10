@@ -1,6 +1,6 @@
 import React from 'react'
 
-export let ButtonElement = (props) => {
+export let ButtonElementPracticalExperiences = (props) => {
     return (
         props.isEdit ?
         <button type="submit">submit</button>

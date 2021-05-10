@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { ButtonElement } from "../form_elements/ButtonElement";
+import { ButtonElementPracticalExperiences } from "../form_elements/ButtonElementPracticalExperiences";
 import { InputElement } from "../form_elements/InputElement";
 
 export let Practical_Informations = (props) => {
-  let { companyName, positionTitle, tasks, dateFrom, dateUntil, handleChange, handleSubmit } = props;
+  let { companyName, positionTitle, tasks, dateFrom, dateUntil, handleChange, handleSubmit, isEdit, invokeEdit } = props;
   return (
     <div>
-      <fieldset style={{ width: "47vw", marginTop: "8px", margin: "auto" }}>
+      <fieldset className="cv-sections">
         <legend>Practical Informations</legend>
         <form onSubmit={handleSubmit}>
           <InputElement
@@ -39,7 +39,8 @@ export let Practical_Informations = (props) => {
             value={dateUntil}
             handleChange={handleChange}
           />
-          <ButtonElement />
+          <ButtonElementPracticalExperiences isEdit={isEdit} invokeEdit={invokeEdit} />
+          {/* <ButtonElement /> */}
         </form>
       </fieldset>
     </div>

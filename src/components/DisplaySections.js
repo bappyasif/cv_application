@@ -18,7 +18,7 @@ export let DisplayCV = (props) => {
     dateUntil,
   } = props;
   return (
-    <div>
+    <div className="cv-display">
       <p>Displaying CV After Submit</p>
       <DisplayGenerals name={name} email={email} number={number} />
       <DisplayEducations

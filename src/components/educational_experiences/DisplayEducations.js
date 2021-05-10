@@ -1,25 +1,24 @@
 import React from "react";
 
 export let DisplayEducations = (props) => {
-  let { schoolName, programTitle, dateOfStudy } = props;
-  return (
+  let { schoolName, programTitle, dateOfStudy, editEducations } = props;
+  return !editEducations ? (
     <fieldset>
       <legend>Educational Informations</legend>
       <p>
-        <label>
-          School Name: <span>{schoolName}</span>
-        </label>
+        <label>School Name:</label>
+        <span>{schoolName}</span>
       </p>
       <p>
-        <label>
-          Program Titile: <span>{programTitle}</span>
-        </label>
+        <label>Program Titile:</label>
+        <span>{programTitle}</span>
       </p>
       <p>
-        <label>
-          Date Of Study: <span>{dateOfStudy}</span>
-        </label>
+        <label>Date Of Study:</label>
+        <span>{dateOfStudy}</span>
       </p>
     </fieldset>
+  ) : (
+    false
   );
 };
