@@ -215,6 +215,7 @@ export class ContainerForCVApplication extends Component {
     } = this.state;
     return (
       <div>
+        <p>Using Stateful Class Components</p>
         <GeneralInformation
           name={name}
           email={email}
